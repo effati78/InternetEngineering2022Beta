@@ -2,34 +2,42 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>My first Web application</title>
+  <meta charset="UTF-8">
+  <title>My first Web application</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,400i,700">
+  <link rel="stylesheet" href="./style.css">
+
 </head>
 
 <body>
-    <h1>The web site</h1>
-    <p>
-        <a href="http://127.0.0.1:8080/hello">Greet the world!</a>
-    </p>
-
-    <form action="http://127.0.0.1:8080/sum" method="GET" id="nameForm">
-        <div>
-            <p>
-                <label for="nameField">Enter Number 1</label>
-                <input name="number1" id="nameField">
-            </p>
-            <p>
-                <label for="nameField">Enter Number 2</label>
-                <input name="number2" id="nameField">
-            </p>
-            <button>Calculate SUM</button>
+  <div class="container">
+    <div>
+      <h1>Sum</h1>
+      <form class="form" action="http://127.0.0.1:8080/sum" method="GET">
+        <label class="number"><input type="number" name="number1" autocomplete="off" placeholder="Number 1"></label>
+        <label class="number"><input type="number" name="number2" autocomplete="off" placeholder="Number 2"></label>
+        <input type="submit" value="calculation">
+        <div class="new">
+          <hr>
+          <a href="http://127.0.0.1:8080/hello" class="cna">Greet the world</a>
         </div>
-    </form>
+      </form>
+    </div>
 
-    <p>
-        <a href="http://127.0.0.1:8080/easygame">Click to play an easy game!</a>
-    </p>
-
+    <div>
+      <h1>Register</h1>
+      <form class="form" action="#">
+        <label class="name"><input type="text" name="name" autocomplete="off" placeholder="Name"></label>
+        <label class="family"><input type="text" autocomplete="off" placeholder="Family"></label>
+        <label class="studentNum"><input type="number" autocomplete="off" placeholder="Student Number"></label>
+        <input type="submit" value="Submit">
+        <div class="new">
+          <hr>
+          <a href="http://127.0.0.1:8080/easyGame" class="cna">Click to play an easy game</a>
+        </div>
+      </form>
+    </div>
+  </div>
 </body>
 
 </html>
