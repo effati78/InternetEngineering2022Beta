@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Raleway;
+    font-size: 14px;
+    --color: rgba(255, 255, 255, 0.07);
+}
+
+h1 {
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    -webkit-text-fill-color: transparent;
+    /*full support in most browsers*/
+    text-fill-color: transparent;
+    /*no support in most browsers*/
+    background: linear-gradient(to right, slategray, aliceblue);
+    -webkit-background-clip: text;
+    background-clip: text;
+    /*partial support in chrome*/
+    align-self: end;
+}
+
+h2 {
+    font-size: 2rem;
+    -webkit-text-fill-color: transparent;
+    /*full support in most browsers*/
+    text-fill-color: transparent;
+    /*no support in most browsers*/
+    background: linear-gradient(to right, slategray, aliceblue);
+    -webkit-background-clip: text;
+    background-clip: text;
+    /*partial support in chrome*/
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.mt-30 {
+    margin-top: 30px;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background: radial-gradient(darkslategray, #000);
+}
+
+.form {
+    width: 300px;
+    height: 25em;
+    color: #000;
+    border: 1.5px solid var(--color, currentcolor);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em;
+    padding-bottom: 6em;
+    justify-content: center;
+    gap: 1.5em;
+    background-color: var(--color);
+    backdrop-filter: blur(150px);
+    position: relative;
+}
+
+.form label {
+    color: var(--color);
+    height: 3em;
+    border-bottom: 1.5px solid;
+    position: relative;
+    isolation: isolate;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 120px;
+}
+
+input::placeholder {
+    color: darkgray;
+}
+
+label::after {
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    height: max-content;
+    left: 2.5%;
+    top: 25%;
+    color: darkgray;
+    padding-right: 0.2em;
+    width: max-content;
+    pointer-events: none;
+    background-color: transparent;
+}
+
+label:hover::after {
+    top: -25%;
+}
+
+label>input {
+    position: absolute;
+    height: 0%;
+    left: 0;
+    inset: 0;
+    border: none;
+    outline: none;
+    padding: 0.5em;
+    background-color: transparent;
+    z-index: -1;
+    color: #fff;
+    opacity: 0;
+    appearance: none;
+}
+
+/*Only tricky part*/
+label:has(input:valid)::after {
+    top: -25%;
+}
+
+input:valid {
+    height: 100%;
+    opacity: 1;
+}
+
+label:hover input {
+    height: 100%;
+    opacity: 1;
+}
+
+input[type="submit"] {
+    position: static;
+    background-color: var(--color);
+    padding: 0.7em;
+    height: auto;
+    color: white;
+    border: none;
+    margin-top: 0.5em;
+    border-radius: 0.25em;
+    text-transform: uppercase;
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
+    outline: 2px solid gray;
+    outline-offset: 5px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 12px;
+    position: absolute;
+    top: 70%;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    color: darkgray;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 301px) {
+    .form {
+        width: calc(100vw - 1.2rem) !important;
+        padding: 0.7em;
+    }
+}
+
+.new {
+    display: flex;
+    align-items: center !important;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    bottom: 15%;
+    left: 0%;
+    width: 100%;
+}
+
+.new hr {
+    width: 100%;
+    margin-bottom: 1.7em;
+    border: none;
+    border-top: 1.5px solid var(--color);
+}
+
+.cna {
+    padding: 1em;
+    height: auto;
+    transform: translateX(1.5em);
+    width: calc(100% - 3em);
+    background-color: darkslategray;
+    display: grid;
+    place-items: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 0.5em;
+}
+
+@media screen and (max-width: 700px) {
+    .form {
+        height: 27em;
+    }
+
+    h1 {
+        align-self: center;
+    }
+}
+
+p {
+    color: #fff;
+}
