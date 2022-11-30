@@ -17,13 +17,16 @@ public class HelloWorld {
         String page = "<!DOCTYPE HTML>\n" +
                 "<html>\n" +
                 "    <head>\n" +
+                "        <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css?family=Raleway:400,400i,700\">"
+                +
+                "        <link rel=\"stylesheet\" href=\"./style.css\">" +
                 "        <title>My web service</title>\n" +
                 "        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n" +
                 "    </head>\n" +
                 "    <body>\n" +
-                "     <p>Number 1 :<i>" + number1 + "</i></p>" +
-                "     <p>Number 2 :<i>" + number2 + "</i></p>" +
-                "     <h1>SUM is :<i>" + (number1 + number2) + "</i></h1>" +
+                "       <div>"+
+                "           <h1>" + number1 + " + " + number2 + " = " + (number1 + number2) + "</h1>" +
+                "       </div>"+
                 "    </body>\n" +
                 "</html>";
         return page;
