@@ -1,27 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>My first Web application</title>
 </head>
+
 <body>
-<h1>The web site</h1>
-<p><a href="http://127.0.0.1:8080/hello">Greet the world!</a></p>
-</form>
+    <h1>The web site</h1>
+    <p>
+        <a href="http://127.0.0.1:8080/hello">Greet the world!</a>
+    </p>
 
+    <form action="http://127.0.0.1:8080/sum" method="GET" id="nameForm">
+        <div>
+            <p>
+                <label for="nameField">Enter Number 1</label>
+                <input name="number1" id="nameField">
+            </p>
+            <p>
+                <label for="nameField">Enter Number 2</label>
+                <input name="number2" id="nameField">
+            </p>
+            <button>Calculate SUM</button>
+        </div>
+    </form>
 
-<form action="http://127.0.0.1:8080/sum" method="GET" id="nameForm">
-    <div>
-
-        <p><label for="nameField">Enter Number 1</label>
-            <input name="number1" id="nameField"></p>
-        <p><label for="nameField">Enter Number 2</label>
-            <input name="number2" id="nameField"></p>
-        <button>Calculate SUM</button>
-    </div>
-</form>
-
-<p><a href="http://127.0.0.1:8080/easygame">Click to play an easy game!</a></p>
+    <p>
+        <a href="http://127.0.0.1:8080/easygame">Click to play an easy game!</a>
+    </p>
 
 </body>
+
 </html>
